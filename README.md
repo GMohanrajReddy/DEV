@@ -1,4 +1,9 @@
 ## DEV
+
+## 
+```
+https://colab.research.google.com/drive/1DHItdl_UKHIxKsR_ryIJ-K6sFJN2Y5jB#scrollTo=SNak-JIG5-2L
+```
 ### 3(i)
 ```
 import numpy as np
