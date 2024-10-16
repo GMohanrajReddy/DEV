@@ -262,5 +262,61 @@ c = (
     .render("Map1.html")  # Render the map to an HTML file
 )
 ```
+##
+## 8
+```
+import pandas as pd
 
+# Load the datasets
+df_red = pd.read_csv("https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv", delimiter=";")
+df_white = pd.read_csv("https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv", delimiter=";")
 
+# Display the columns of the red wine dataframe
+print(df_red.columns)
+
+# Display rows 100 to 110 (note that iloc is 0-based)
+print(df_red.iloc[100:110])
+
+##
+
+df_red.dtypes
+
+##
+
+df_red.describe()
+
+##
+
+df_red.info()
+
+##
+
+import seaborn as sns
+import matplotlib.pyplot as plt  # Make sure to import matplotlib for plotting
+
+# Set the figure size
+sns.set(rc={'figure.figsize': (14, 8)})
+
+# Create a count plot for the 'quality' column
+sns.countplot(x='quality', data=df_red)
+
+plt.title('Count of Wine Quality Ratings')
+plt.xlabel('Quality')
+plt.ylabel('Count')
+plt.show()
+
+##
+
+sns.distplot(df_red['alcohol']) # Changed 'alchol' to 'alcohol'
+
+##
+
+from scipy.stats import skew
+skew(df_red['alcohol'])
+
+##
+sns.boxplot(x='quality', y='alcohol', data=df_red)
+
+```
+##
+# GM 
